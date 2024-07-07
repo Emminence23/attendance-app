@@ -20,19 +20,17 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
       appBar: AppBar(
-        title:const Text("Home"),
+        backgroundColor: Colors.blue,
+        title: const Text("ATTENDANCE HISTORY"),
       ),
       body: Scaffold(
-        // appBar: ,
-        body: Column(
-          children: [
-            ElevatedButton(
-              onPressed: (){
-                Navigator.pushNamed(context, '/home');
-              }, 
-              child: const Text("Back to inital")),
+          // appBar: ,
+          body: Stack(
+        children: [
+          Column(
+            children: [
             TableCalendar(
                 firstDay: DateTime.utc(2024, 1, 1),
                 lastDay: DateTime.utc(2030, 12, 31),
@@ -69,8 +67,9 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
           ],
-        ),
-      )
+          ),
+        ],
+      )),
     );
   }
 }

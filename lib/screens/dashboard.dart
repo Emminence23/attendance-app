@@ -49,7 +49,7 @@ class _DashboardState extends State<Dashboard> {
                         label: "Mark Attendance",
                         icon: Icons.calendar_month_outlined,
                         onTap: () {
-                          Navigator.pushNamed(context, '/history');
+                          Navigator.pushNamed(context, '/picture');
                         },
                       ),
                       const SizedBox(width: 16.0),

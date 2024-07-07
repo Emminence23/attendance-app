@@ -152,12 +152,15 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: const Text("Login")),
                 ),
+                Container(
+                  height: 10,
+                ),
                 SizedBox(
                   width: double.infinity,
                   height: 45,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blueAccent[100],
+                          backgroundColor: Colors.blueAccent,
                           foregroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
