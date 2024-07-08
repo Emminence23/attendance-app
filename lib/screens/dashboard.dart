@@ -14,8 +14,9 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //backgroundColor: Colors.indigo[900]?.withOpacity(0.5),
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        //backgroundColor: Colors.brown[400],
         title: const Text('DASHBOARD'),
         actions: [
           IconButton(
@@ -86,7 +87,7 @@ class ProfileCard extends StatelessWidget {
       width: min(double.infinity, 400),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.indigo[50],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -109,8 +110,9 @@ class ProfileCard extends StatelessWidget {
               const SizedBox(height: 8.0),
               Text(
                 name,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 20.0,
+                  color: Colors.indigo[900],
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -148,11 +150,11 @@ class ActionButtons extends StatelessWidget {
       flex: 1,
       child: ElevatedButton(
         onPressed: () {
-          print("Button Pressed");
+          //print("Button Pressed");
           onTap();
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.indigo[50],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -166,19 +168,19 @@ class ActionButtons extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50.0),
-                  color: Colors.blue.withOpacity(0.2),
+                  color: Colors.brown.withOpacity(0.3),
                 ),
                 child: Icon(
                   icon,
                   size: 50.0,
-                  color: Colors.blue,
+                  color: Colors.indigo[800],
                 ),
               ),
               const SizedBox(height: 8.0),
               Text(label,
                   style: TextStyle(
                     letterSpacing: 2,
-                    color: Colors.grey[600],
+                    color: Colors.grey[700],
                   )),
             ],
           ),

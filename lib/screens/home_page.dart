@@ -22,14 +22,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
      return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
         title: const Text("ATTENDANCE HISTORY"),
       ),
-      body: Scaffold(
-          // appBar: ,
-          body: Stack(
-        children: [
-          Column(
+      body: Container(
+        color: Colors.white,
+        child: Column(
             children: [
             TableCalendar(
                 firstDay: DateTime.utc(2024, 1, 1),
@@ -68,8 +65,6 @@ class _HomePageState extends State<HomePage> {
               ),
           ],
           ),
-        ],
-      )),
-    );
+      ));
   }
 }

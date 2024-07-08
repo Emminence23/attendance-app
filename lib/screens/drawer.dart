@@ -13,7 +13,7 @@ class DrawerItems extends StatelessWidget {
 
     return Container(
       // color: theme.drawerTheme.backgroundColor,
-      color: const Color.fromARGB(255, 255, 255, 255),
+      color: const Color(0xFFD7CCC8),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,7 +24,7 @@ class DrawerItems extends StatelessWidget {
             Container(
               alignment: Alignment.centerRight,
               child: IconButton(
-                icon: Icon(IconData(0xe16a, fontFamily: 'MaterialIcons')),
+                icon: const Icon(IconData(0xe16a, fontFamily: 'MaterialIcons')),
                 onPressed: () {
                   Navigator.pop(context);
                 },
@@ -34,7 +34,7 @@ class DrawerItems extends StatelessWidget {
               width: 150,
               height: 150,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 253, 255, 255),
+                color: const Color.fromARGB(255, 253, 255, 255),
                 shape: BoxShape.circle,
                 border: Border.all(
                   width: 1,
@@ -48,7 +48,7 @@ class DrawerItems extends StatelessWidget {
                 // width: double.infinity,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             NavbarItem(

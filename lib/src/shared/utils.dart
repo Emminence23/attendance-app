@@ -57,10 +57,12 @@ bool isSameDay(DateTime? a, DateTime? b) {
   if (a == null || b == null) {
     return false;
   }
-  if(a.year < b.year) return true;
-  else if(a.year == b.year){
-    if(a.month < b.month) return true;
-    else if(a.month == b.month){
+  if(a.year < b.year) {
+    return true;
+  } else if(a.year == b.year){
+    if(a.month < b.month) {
+      return true;
+    } else if(a.month == b.month){
       if(a.day < b.day) return true;
     }
   }

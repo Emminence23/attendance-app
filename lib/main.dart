@@ -27,7 +27,12 @@ class MyApp extends StatelessWidget {
       title: 'Attendance App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+        
+        scaffoldBackgroundColor: Colors.indigo[900]?.withOpacity(0.5),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown[400]!),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.brown[400],
+        ),
         useMaterial3: true,
       ),
       initialRoute: initialRoute,

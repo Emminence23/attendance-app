@@ -206,7 +206,7 @@ class TableCalendar<T> extends StatefulWidget {
 
   /// Creates a `TableCalendar` widget.
   TableCalendar({
-    Key? key,
+    super.key,
     required DateTime focusedDay,
     required DateTime firstDay,
     required DateTime lastDay,
@@ -269,8 +269,7 @@ class TableCalendar<T> extends StatefulWidget {
         focusedDay = normalizeDate(focusedDay),
         firstDay = normalizeDate(firstDay),
         lastDay = normalizeDate(lastDay),
-        currentDay = currentDay ?? DateTime.now(),
-        super(key: key);
+        currentDay = currentDay ?? DateTime.now();
 
   @override
   _TableCalendarState<T> createState() => _TableCalendarState<T>();
@@ -515,8 +514,7 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
               Widget? cell = widget.calendarBuilders.weekNumberBuilder
                   ?.call(context, weekNumber);
 
-              if (cell == null) {
-                cell = Padding(
+              cell ??= Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   child: Center(
                     child: Text(
@@ -525,7 +523,6 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
                     ),
                   ),
                 );
-              }
 
               return cell;
             },
@@ -688,10 +685,10 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
 
         return Stack(
           alignment: widget.calendarStyle.markersAlignment,
-          children: children,
           clipBehavior: widget.calendarStyle.canMarkersOverflow
               ? Clip.none
               : Clip.hardEdge,
+          children: children,
         );
       },
     );

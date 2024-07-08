@@ -20,7 +20,8 @@ class _NavbarItemState extends State<NavbarItem> {
   @override
   Widget build(BuildContext context) {
     return  ListTile(
-                leading:  Icon(widget.icon),
+                leading:  Icon(widget.icon, color: Colors.indigo[900]?.withOpacity(0.9)),
+                // color : widget.iconColor dne
                 title: Text(
                   widget.text,
                 ),

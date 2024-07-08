@@ -31,7 +31,7 @@ class CapturePicPageState extends State<CapturePicPage> {
         Get.snackbar(
           "Error",
           "No valid Camera Detected",
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           colorText: Colors.white,
           backgroundColor: Colors.red,
         );
@@ -81,8 +81,9 @@ class CapturePicPageState extends State<CapturePicPage> {
       setState(() {
         _image = image;
       });
-    } catch (e) {
-      print(e);
+    }
+    catch (e) {
+      //print(e);
     }
   }
 
@@ -104,7 +105,7 @@ class CapturePicPageState extends State<CapturePicPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        //backgroundColor: Colors.blue,
         title: const Text('VERIFY YOU'),
         actions: [
           IconButton(
@@ -126,7 +127,7 @@ class CapturePicPageState extends State<CapturePicPage> {
                           Expanded(child: CameraPreview(_controller)),
                           IconButton(
                             onPressed: _captureImage,
-                            icon: Icon(Icons.camera),
+                            icon: const Icon(Icons.camera),
                             iconSize: 50,
                             color: Colors.black,
                           ),
